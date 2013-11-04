@@ -1,0 +1,276 @@
+html{
+	height:150%;
+}
+body{
+	/*background-color:#D6D6D6;*/
+	/*background-color:#888888*/
+	height:90%;
+	overflow-x:hidden;
+
+	/* Note: This gradient may render differently in browsers that don't support the unprefixed gradient syntax */
+
+/* IE10 Consumer Preview */ 
+background-image: -ms-linear-gradient(bottom, #21A9E9 0%, #FFFFFF 100%);
+
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(bottom, #21A9E9 0%, #FFFFFF 100%);
+
+/* Opera */ 
+background-image: -o-linear-gradient(bottom, #21A9E9 0%, #FFFFFF 100%);
+
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #21A9E9), color-stop(1, #FFFFFF));
+
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(bottom, #21A9E9 0%, #FFFFFF 100%);
+
+/* W3C Markup, IE10 Release Preview */ 
+background-image: linear-gradient(to top , #21A9E9 0%, #FFFFFF 100%);
+
+
+}
+input[type="text"]{
+	background-color:#E6E6E6;
+	border:none;
+	height:2em;
+}
+
+textarea{
+	background-color:#E6E6E6;
+	border:none;
+}
+
+input[type="submit"]{
+	width: 10em;
+}
+
+.fsSubmitButton{
+padding: 10px 20px 11px !important;
+font-size: 11px !important;
+background-color: #E6E6E6;
+font-weight: bold;
+/*text-shadow: 1px 1px #F36C8C;*/
+/*color: #21A9E9;*/
+border-radius: 100px;
+-moz-border-radius: 100px;
+-webkit-border-radius: 100px;
+border: none;
+cursor: pointer;
+box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+}
+
+#wrapper{
+	margin-left:auto;
+    margin-right:auto;
+    width:100%;
+}
+#logo{
+	margin: auto;
+	top: 0px;
+	width: 70%;
+}
+
+#maincontainer{
+	position:relative;
+	margin: auto;
+	height:700px;
+	width:100%;
+	top: 40px;
+	margin-bottom: 35px;
+
+}
+
+#pagecontent{
+	/*position:absolute;*/
+	width: 90%;
+	height: 300px;	
+	margin: auto;
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif !important;
+}
+#translucent{
+	height:290px;
+	width: 70%;
+	margin: 0px auto;
+	background-color: #fff;
+    background-color: rgba(0, 0, 0,0.2);	
+    position: relative;
+    overflow: auto;
+}
+
+#description{
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-size: large;
+	color: white;
+	margin: -5px 20px 5px -10px;
+	position:absolute;
+}
+
+
+
+.motto{
+	float:right;
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-size: small;
+	color: #9D9FA4;
+}
+
+#portal{
+    position:absolute;
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-size: small;
+	color: #9D9FA4;
+	right:10px;
+}
+
+#slideshow-pic{
+	float:left;
+	margin: 0px 20px 0px 25px;
+}
+#navcontainer{
+	height:35px;
+	width:99%;
+	position: absolute;
+	top: 80px;
+	background:url(../images/navbar.png) ;
+	z-index: 1;
+
+	
+}
+
+
+#mission{
+	position: relative;
+	margin:10px 20px 10px 20px;
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-size: medium;
+	color: #FFFFFF;
+}
+#partners{
+	position: relative;
+	margin:10px 10px 10px 10px;
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-size: x-large;
+	color: #FFFFFF;
+}
+
+#navbar{
+	width: 55%;
+	margin: auto;
+	height:100%;
+	list-style-type: none;
+	overflow:auto;
+}
+
+#navbar li{
+	height:35px;
+	float:left;
+}
+
+#navbar li a{
+	width:105px;
+	display:block;
+}
+.readmore{
+	font-size: medium;
+	color: #21A9E9;
+}
+#infocontainer{
+	position:relative;
+	top: 0px;
+	width: 60%;
+	height: 300px;	
+	margin: 0px auto;
+
+}
+#info-one{
+width:415px;
+height:360px;
+background-color:rgba(0, 0, 0,0.3);
+float:left;
+margin-left: 5px;
+margin-right: 5px;
+overflow:auto;
+
+}
+#info-two{
+width:415px;
+height:360px;
+background-color:rgba(0, 0, 0,0.3);
+float:left;
+margin-left: 5px;
+margin-right: auto;
+overflow:auto;
+}
+#copyright{
+	font-size: x-small;
+}
+#soon{
+	position: relative;
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-size: xx-large;
+	color: #686868;
+	top: 250px;
+	left: 40%;
+}
+
+
+#footercontainer{
+	position:relative;
+	margin: 0px auto;
+	height:100px;
+	width:75%;
+	top: 10px;
+	background-color:rgba(0, 0, 0,0.3);
+    overflow:auto;
+
+}
+#solutionsnavigation{
+	position:absolute;
+	margin: 0px auto;
+	height:300px;
+	width:15%;
+	top: 120px;
+	left: 85px;
+	background-color:rgba(255, 255, 255,0.4);
+    overflow: auto;
+}
+
+#solutionsnavigation ul li{
+	list-style-type: none;
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-size: medium;
+	color: #686868;
+	margin-bottom:15px;
+	cursor: default;
+}
+
+#subcontent{
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-size: medium;
+	color: #686868;
+	margin: 0px auto;
+	width: 90%; 
+    overflow: auto;
+}
+.home{
+	background:url(../images/navbar_home.png) no-repeat;
+}
+.news{
+	background:url(../images/navbar_news.png) no-repeat;
+}
+.about{
+	background:url(../images/navbar_about.png) no-repeat;
+}
+.contact{
+	background:url(../images/navbar_contact.png) no-repeat;
+}
+.careers{
+	background:url(../images/navbar_careers.png) no-repeat;
+}
+.solutions{
+	
+	background:url(../images/navbar_solutions.png) no-repeat;
+	}
+	
