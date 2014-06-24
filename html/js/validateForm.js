@@ -14,4 +14,5 @@ if (firstName == null || firstName == "" ||
   alert("All fields are required. Please fill in every field.");
   return false;
   }
+return true;
 }

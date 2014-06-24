@@ -19,6 +19,7 @@
   </style>
   <script src="js/jquery-1.8.2.min.js"></script>
   <script src="js/validateForm.js"></script>
+  <script src="js/validateEmail.js"></script>
   <script>
     $(function(){
         $('#form').submit(function(e){
@@ -26,17 +27,25 @@
             // Stop the form actually posting
             e.preventDefault();
 
+	    if(validateForm()){
             // Send the request
+	    if(validateEmail($('#email').val())){
             $.post('php/contact.php', {
                 subject: $('#subject').val(),
                 email: $('#email').val(),
                 firstName: $('#firstName').val(),
                 lastName: $('lastName').val(),
-                message: $('#message').val()
+                message: $('#message').val(),
+                captchaCode: $('#captchaCode').val()
             }, function(d){
 		$('#rm').empty();
 		$('#result').text(d);
             });
+            }
+	    else{
+		$('#placeHolder').text("*Please enter a valid email address.");
+	    }
+	    }
         });
     });
     </script>
@@ -47,19 +56,23 @@
 <p class="p1"><b>Contact Aurora Engineering Solutions</b></p>
 <div id='rm'>
 <br>
-<span class="s1"><b>Contact Form:</b></span><br/><br/>
+<span class="s1"><b>Contact Form:</b></span><div style='display:inline;float:right;'><img alt='contact us image' src='images/contactCard.png'/></div>
 
-<form id='form' name='contact' action='php/contact.php' method = 'post' onsubmit='return validateForm()'>
-first name<br/>
+<!--form id='form' name='contact' action='php/contact.php' method = 'post' onsubmit='return validateForm()'-->
+<form id='form' name='contact' action='php/contact.php' method = 'post'>
+first name</br>
 <input type='text' id='firstName' name='firstName' size='35'><br/>
 last name<br/>
 <input type='text' id='lastName' name='lastName' size='35'><br/>
 email (not published)<br/>
-<input type='text' id='email' name='email' size='35'><br/>
+<input type='text' id='email' name='email' size='35'><div id='placeHolder' style='color:red;display:inline;'></div><br/>
 subject<br/>
 <input type='text' id='subject' name='subject' size='35'><br/>
 message<br/>
-<textarea name='message' id='message' rows='20' cols='50'/><br/>
+<textarea name='message' id='message' rows='15' cols='50'/><br/>
+<img id='captcha' src='/securimage/securimage_show.php' alt='CAPTCHA Image' /><br/>
+<input type='text' id='captchaCode' name='captcha_code' size='10' maxlength='6' ><br/>
+<a href="#" onclick="document.getElementById('captcha').src = '/securimage/securimage_show.php?' + Math.random(); return false">[ Different Image ]</a></br>
 <input type='submit' value='submit' class='fsSubmitButton'></input>
 </div>
 <div id='result'></div>

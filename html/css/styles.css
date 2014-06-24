@@ -4,7 +4,7 @@ html{
 body{
 	/*background-color:#D6D6D6;*/
 	/*background-color:#888888*/
-	/*height:100%;*/
+	height:100%;
 	/*overflow-:hidden;*/
 
 	/* Note: This gradient may render differently in browsers that don't support the unprefixed gradient syntax */
@@ -29,7 +29,9 @@ background-image: linear-gradient(to top , #21A9E9 0%, #FFFFFF 100%);
 
 
 }
-
+h3{
+    color: #00bef3;
+}
 input[type="text"]{
         background-color:#E6E6E6;
         border:none;
@@ -64,9 +66,11 @@ box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 #wrapper{
 	margin-left:auto;
     margin-right:auto;
-    width:1450px;
+   /* width:1450px;*/
+    width:100%;
     height: 100%;
-    overflow:auto;
+    overflow:hidden;
+    display:block;
 }
 #logo{
 	margin-left: 300px;
@@ -85,15 +89,25 @@ box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 	margin-left:10px;
 	margin-right:10px;
 }
+#topcontainer{
+	position:relative;
+	top: 0px;
+	margin-left:auto;
+	margin-right:auto;
+	height:75px;
+    overflow:hidden;
+    min-width:900px;
 
+}
 #maincontainer{
 	position:relative;
-	margin: auto;
+	top: 10px;
+	margin-left:auto;
+	margin-right:auto;
 	height:700px;
-	width:100%;
-	top: 40px;
+	/*width:100%;*/
 	margin-bottom: 35px;
-    overflow:auto;
+    overflow:hidden;
 
 }
 
@@ -119,7 +133,7 @@ box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 	top:0px;
 	height:630px;
 	width: 245px;
-	right: 255px;
+	right: 0px;
 	margin: 0px auto;
     background-color: rgba(0, 0, 0,0.2);	
     overflow: auto;
@@ -129,10 +143,22 @@ box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 	top:0px;
 	height:630px;
 	width: 245px;
-	left: 255px;
+	left: 0px;
 	margin: 0px auto;
     background-color: rgba(0, 0, 0,0.2);	
     overflow: auto;
+}
+#bottomcontainer{
+	position: absolute;
+	height:250px;
+	width: 400px;
+    background-color: rgba(0, 0, 0,0.2);	
+    left: 250px;
+    top:380px;
+    overflow: hidden;
+}
+#socialnetwork{
+    margin-top: 15px;
 }
 #soon{
     position: relative;
@@ -163,19 +189,11 @@ box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 	color:#FFFFFF;
 	
 }
-#bottomcontainer{
-	height:250px;
-	width: 400px;
-	margin-left:15px;
-    background-color: rgba(0, 0, 0,0.2);	
-    position: absolute;
-    top:380px;
-    overflow: auto;
-}
+
 
 #description{
 	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-	font-size: small;
+	font-size: 13px;
 	color: white;
 	position: absolute;
 	margin-top: 0px;
@@ -190,29 +208,34 @@ box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 	font-size: small;
 	color: #9D9FA4;
-	top: 20px;
-	left: 600px;
+	top: 42px;
+	left: 565px;
+	width:250px;
 }
 #portal{
-	position:absolute;
+	position: relative;
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-	font-size: small;
-	color: #9D9FA4;
-	left: 1300px;
-	top: 10px;
-	display:block;
+	color: #FFFFFF;
+	display:inline;
+	height: 40px;
+	width: 120px;
+	float:right;
+	bottom:60px;
+
 }
 #slideshow-pic{
 	float:left;
 }
 #navcontainer{
 	height:35px;
-    width:1450px;
-	position: absolute;
+    width:100%;
+    /*min-width: 1450px;*/
+	/*position: absolute;*/
 	top: 80px;
 	background:url(../images/navbar.png) ;
 	z-index: 1;
-	margin: 0px auto;
+	/*margin: 0px auto;*/
+	overflow:hidden;
 
 	
 }
@@ -228,11 +251,11 @@ box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 .rightpanelheader{
 	width: 245px;
 	height:35px;
-	background-image: -moz-linear-gradient(top, #FFFFFF, #9D9FA4);
+	/*background-image: -moz-linear-gradient(top, #FFFFFF, #9D9FA4);*/
     background-image: -ms-linear-gradient(top, #FFFFFF 0%, #9D9FA4 100%);
 	background-image: -o-linear-gradient(top, #FFFFFF 0%, #9D9FA4 100%);
 	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #FFFFFF), color-stop(1, #9D9FA4));
-	background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #9D9FA4 100%);
+	/*background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #9D9FA4 100%);*/
 	background-image: linear-gradient(to top , #FFFFFF 0%, #9D9FA4 100%); 
 	position: relative;
 	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
@@ -244,11 +267,11 @@ box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 .leftpanelheader{
 	width: 245px;
 	height:35px;
-	background-image: -moz-linear-gradient(top, #FFFFFF, #9D9FA4);
+	/*background-image: -moz-linear-gradient(top, #FFFFFF, #9D9FA4);*/
     background-image: -ms-linear-gradient(top, #FFFFFF 0%, #9D9FA4 100%);
 	background-image: -o-linear-gradient(top, #FFFFFF 0%, #9D9FA4 100%);
 	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #FFFFFF), color-stop(1, #9D9FA4));
-	background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #9D9FA4 100%);
+	/*background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #9D9FA4 100%);*/
 	background-image: linear-gradient(to top , #FFFFFF 0%, #9D9FA4 100%);  
 	position: relative;
 	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
@@ -258,11 +281,11 @@ box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 .bottompanelheader{
 	width: 400px;
 	height:35px;
-	background-image: -moz-linear-gradient(top, #FFFFFF, #9D9FA4);
+	/*background-image: -moz-linear-gradient(top, #FFFFFF, #9D9FA4);*/
     background-image: -ms-linear-gradient(top, #FFFFFF 0%, #9D9FA4 100%);
 	background-image: -o-linear-gradient(top, #FFFFFF 0%, #9D9FA4 100%);
 	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #FFFFFF), color-stop(1, #9D9FA4));
-	background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #9D9FA4 100%);
+	/*background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #9D9FA4 100%);*/
 	background-image: linear-gradient(to top , #FFFFFF 0%, #9D9FA4 100%);
 	position: relative;
 	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
@@ -276,7 +299,23 @@ box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 	margin: auto;
 	height:100%;
 	list-style-type: none;
-	overflow:auto;
+	overflow:hidden;
+}
+#globalnav{
+	list-style: none;
+	margin: 10px auto;
+	height: 30px;
+	width:350px;
+	float: left;
+
+}
+#globalnav li{
+		display:inline;
+		float:left;
+}
+#globalnav li a:link{
+		color:#FFFFFF;
+		text-decoration:none;
 }
 
 #navbar li{
@@ -311,7 +350,13 @@ overflow: auto;
 
 }
 #copyright{
-	font-size: x-small;
+	position: relative;
+	font-size: small;
+	float: right;
+	margin-right: 20px;
+	bottom: 5px;
+	/*color: #30AFE2;*/
+	color: #FFFFFF;
 }
 #soon{
 	position: relative;
@@ -334,21 +379,33 @@ overflow: auto;
 #footercontainer{
 	position:relative;
 	margin: 0px auto;
-	height:100px;
-	width:75%;
-	top: 10px;
-	background-color:rgba(0, 0, 0,0.3);
-	overflow: auto;
+	/*left: 252px;*/
+	height:75px;
+	width:919px;
+	top: 15px;
+	/*background-color:rgba(0, 0, 0,0.3);*/
+	/*background-image: -ms-linear-gradient(top, #FFFFFF 0%, #9D9FA4 100%);
+	background-image: -o-linear-gradient(top, #FFFFFF 0%, #9D9FA4 100%);
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #FFFFFF), color-stop(1, #9D9FA4));
+	
+	background-image: linear-gradient(to top , #FFFFFF 0%, #9D9FA4 100%); */
+	/*background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #9D9FA4 100%);*/
+	overflow: hidden;
+	color: #FFFFFF;
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-size: small;
 
 }
 #solutionsnavigation{
 	position:absolute;
 	margin: 0px auto;
 	height:300px;
-	width:15%;
-	top: 120px;
+	width:225px;
+	top: 155px;
+	float:left;
 	left: 85px;
 	background-color:rgba(255, 255, 255,0.4);
+	overflow:auto;
 }
 
 #solutionsnavigation ul li{
@@ -357,17 +414,19 @@ overflow: auto;
 	font-size: medium;
 	color: #686868;
 	margin-bottom:15px;
-	cursor: default;
+	cursor: pointer;
 }
 
 #subcontent{
 	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-	font-size: medium;
+	font-size: 16px;
 	color: #686868;
-	margin: 0px auto;
+	margin: 15px auto;
 	width: 90%;
 	overflow:auto; 
 }
+img {text-decoration: none; border: 0px}
+
 .home{
 	background:url(../images/navbar_home.png) no-repeat;
 }
@@ -387,4 +446,31 @@ overflow: auto;
 	
 	background:url(../images/navbar_solutions.png) no-repeat;
 	}
+	
+.btn {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #00bef3, #2980b9);
+  background-image: -moz-linear-gradient(top, #00bef3, #2980b9);
+  background-image: -ms-linear-gradient(top, #00bef3, #2980b9);
+  background-image: -o-linear-gradient(top, #00bef3, #2980b9);
+  background-image: linear-gradient(to bottom, #00bef3, #2980b9);
+  -webkit-border-radius: 20;
+  -moz-border-radius: 20;
+  border-radius: 20px;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  color: #ffffff;
+  font-size: 10px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3CCDFD, #00bef3);
+  background-image: -moz-linear-gradient(top, #3CCDFD, #00bef3);
+  background-image: -ms-linear-gradient(top, #3CCDFD, #00bef3);
+  background-image: -o-linear-gradient(top, #3CCDFD, #00bef3);
+  background-image: linear-gradient(to bottom, #3CCDFD, #00bef3);
+  text-decoration: none;
+}
 	

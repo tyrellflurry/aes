@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <title>Contact Us</title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1187.34">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif; color: #686868}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif; color: #686868}
+    p.p3 {margin: 5.0px 0.0px 0.0px 0.0px; font: 24.0px Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif; color: #00bef3}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif; color: #636363}
+    span.s1 {font: 16.0px Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif; color: #01b0f0}
+    span.s2 {font: 12.0px Arial; color: #696a6c}
+    span.s3 {text-decoration: underline ; color: #4787ff}
+    span.s4 {text-decoration: underline ; color: #0000ee}
+  </style>
+  <script src="js/jquery-1.8.2.min.js"></script>
+  <script src="js/validateForm.js"></script>
+  <script src="js/validateEmail.js"></script>
+  <script>
+    $(function(){
+        $('#form').submit(function(e){
+
+            // Stop the form actually posting
+            e.preventDefault();
+
+	    if(validateForm()){
+            // Send the request
+	    if(validateEmail()){
+            $.post('php/contact.php', {
+                subject: $('#subject').val(),
+                email: $('#email').val(),
+                firstName: $('#firstName').val(),
+                lastName: $('lastName').val(),
+                message: $('#message').val()
+            }, function(d){
+		$('#rm').empty();
+		$('#result').text(d);
+            });
+            }
+	    else{
+		$('#placeHolder').text("*Please enter a valid email address.");
+	    }
+	    }
+        });
+    });
+    </script>
+</head>
+<body>
+<br><br>
+<!--img alt='contact us image' src='images/ID-100200910.jpg'/-->
+<p class="p1"><b>Contact Aurora Engineering Solutions</b></p>
+<div id='rm'>
+<br>
+<span class="s1"><b>Contact Form:</b></span><div style='display:inline;float:right;'><img alt='contact us image' src='images/contactCard.png'/></div>
+
+<!--form id='form' name='contact' action='php/contact.php' method = 'post' onsubmit='return validateForm()'-->
+<form id='form' name='contact' action='php/contact.php' method = 'post'>
+first name</br>
+<input type='text' id='firstName' name='firstName' size='35'><br/>
+last name<br/>
+<input type='text' id='lastName' name='lastName' size='35'><br/>
+email (not published)<br/>
+<input type='text' id='email' name='email' size='35'><div id='placeHolder' style='color:red;display:inline;'></div><br/>
+subject<br/>
+<input type='text' id='subject' name='subject' size='35'><br/>
+message<br/>
+<textarea name='message' id='message' rows='20' cols='50'/><br/>
+<input type='submit' value='submit' class='fsSubmitButton'></input>
+</div>
+<div id='result'></div>
+
+</body>
+</html>

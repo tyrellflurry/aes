@@ -1,0 +1,7 @@
+rewriteengine on
+rewritecond %{HTTP_HOST} ^www.aurora-es.com$ [OR]
+rewritecond %{HTTP_HOST} ^aurora-es.com$
+rewriterule ^email "https\:\/\/mail\.ex4\.secureserver\.net\/\/owa" [R=301,L] #52859523950e0
+rewritecond %{HTTP_HOST} ^www.aurora-es.com$ [OR]
+rewritecond %{HTTP_HOST} ^aurora-es.com$
+rewriterule ^portal "https\:\/\/aesdocuments\.sp\.ex4\.secureserver\.net\/" [R=301,L] #528595524c896

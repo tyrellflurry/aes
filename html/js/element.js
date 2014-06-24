@@ -53,7 +53,9 @@ var incr = 1;
 			stopLoop = true;
 			document.location.hash = "aes"+clickedId;
 			checkHash();
+			
 		}
+		
 	});
 	
 
@@ -170,13 +172,12 @@ var incr = 1;
 		$("#"+hash).css("background", "url(images/navbar_clicked_"+hash+".png) no-repeat");
 		removeSlideshow();
 		removeAllElements();
-		/*$('#wrapper').css({
-						'height':'',
-						'height':'100%'
-						});*/
+		$('#wrapper').css({
+						'min-width':'',
+						});
 		$("#maincontainer").css({
 			'background-color': 'rgba(255, 255, 255,0.5)',
-			'width': '50%',
+			'width': '700px',
 			'height': '700px'
 			
 			});
@@ -185,12 +186,13 @@ var incr = 1;
 			stopLoop = false;
 			$("#maincontainer").css({
 				'background-color': '',
-				'width': '1425px'
+				'width': '900px',
+				'height': '650px'
 				});
 			$('#pagecontent').css({
 					'height':'300px',
 					'width': '',
-					'width': '30%',
+					'width': '500px',
 					'height': '',
 					'height': '500px'
 					});
@@ -203,7 +205,7 @@ var incr = 1;
 			slideLoop();
 			$('<div/>').attr({
 				'id':'bottomcontainer'
-			}).load("pages/home/bottomcontainer.html").appendTo('#pagecontent');
+			}).load("pages/home/bottomcontainer.html").appendTo('#maincontainer');
 			
 			//();
 		}else{
@@ -223,7 +225,10 @@ var incr = 1;
 					'height':'',
 					'height':'1000px',
 						});
-				$('#pagecontent').css('height','300px');
+				$('#wrapper').css({
+					'min-width':'1400px'
+				});
+				$('#pagecontent').css('height','225px');
 				$('<div/>').attr({
 					'id' : 'content'
 				}).fadeIn(1000).load("pages/"+hash+".html").appendTo('#pagecontent');
@@ -231,9 +236,9 @@ var incr = 1;
 					'id':'solutionsnavigation'
 				}).fadeIn(1000).load('pages/solutionsnav.html').appendTo('#wrapper');
 				
-				setTimeout(function(){
+				//setTimeout(function(){
 					addSubContent(solutionClicked);
-				},1000);		
+				//},1000);		
 				
 				setTimeout(addSolutionClick, 1000);
 			}else if((subHashIndex = hash.indexOf("_"))> -1){
@@ -241,21 +246,31 @@ var incr = 1;
 				solutionClicked = hash.substr(subHashIndex+2);
 				
 			}else{
+				
 				$('<div/>').attr({
 					'id' : 'content'
 				}).fadeIn(1000).load("pages/"+hash+".html").appendTo('#pagecontent');
-				
+				//setTimeout($('#subcontent').stop(true, false), 1000);
 				if(hash === "partners"){
-					$('#pagecontent').css('height','1800px');
+					$('#pagecontent').css('height','1750px');
 					$('#maincontainer').css({
 						'height':'',
-						'height':'1800px'
+						'height':'1850px'
 						});
-				}/*else{
-					//$('#maincontainer').css('height','700px');
-					//$('#pagecontent').css('height','300px');
-					
-				}*/
+				}else if(hash === "careers"){
+					$('#pagecontent').css('height', '900px');
+					$('#maincontainer').css({
+						'height':'',
+						'height':'900px'
+							});
+				}else if(hash === "termsofuse"){
+					console.log("Terms Of Use");
+					$('#pagecontent').css('height','2500px');
+					$('#maincontainer').css({
+						'height':'',
+						'height':'2500px'
+						});
+				}
 				
 			}
 		}
@@ -286,11 +301,15 @@ var incr = 1;
 	 * Parameters: N/A
 	 */
   function addSubContent(content){
-	 $("#"+content).css("color", "#21A9E9");
+	  setTimeout(function(){
+		  $("#"+content).css("color", "#21A9E9");
+	  },500);
+	 
 	 $('#subcontent').remove();
 	 $('<div/>').attr({
 		'id':'subcontent'
 	 }).fadeIn(1000).load('pages/solutions/'+content+'.html').appendTo('#maincontainer');
+	 
   }
    
   
