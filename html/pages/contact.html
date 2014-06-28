@@ -69,11 +69,11 @@ email (not published)<br/>
 subject<br/>
 <input type='text' id='subject' name='subject' size='35'><br/>
 message<br/>
-<textarea name='message' id='message' rows='15' cols='50'/><br/>
+<textarea name='message' id='message' rows='10' cols='50'/><br/>
 <img id='captcha' src='/securimage/securimage_show.php' alt='CAPTCHA Image' /><br/>
-<input type='text' id='captchaCode' name='captcha_code' size='10' maxlength='6' ><br/>
-<a href="#" onclick="document.getElementById('captcha').src = '/securimage/securimage_show.php?' + Math.random(); return false">[ Different Image ]</a></br>
-<input type='submit' value='submit' class='fsSubmitButton'></input>
+<input type='text' id='captchaCode' name='captcha_code' size='10' maxlength='6' >
+<a href="#" onclick="document.getElementById('captcha').src = '/securimage/securimage_show.php?' + Math.random(); return false">[ Different Image ]</a><p>
+<input type='submit' value='submit' class='fsSubmitButton'></input></p>
 </div>
 <div id='result'></div>
 
